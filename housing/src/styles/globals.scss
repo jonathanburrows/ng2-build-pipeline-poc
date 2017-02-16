@@ -1,0 +1,10 @@
+/* Once the angular cli allows for overriding sass globally, this will replace @lvl/core/globals.scss */
+@import 'node_modules/@lvl/core/src/styles/variables.scss';
+
+html,
+body {
+    font-family: $font-family;
+    font-size: $small-font-size;
+    margin: 0;
+    padding: 0;
+}

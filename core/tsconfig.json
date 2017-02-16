@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es6", "dom" ],
+    "mapRoot": "./",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "dist/out-tsc",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "@angular/platform-browser": [ "./node_modules/@angular/platform-browser" ],
+      "@angular/platform-browser-dynamic": [ "./node_modules/@angular/platform-browser-dynamic" ],
+      "@angular/core": [ "./node_modules/@angular/core" ],
+      "@lvl/home": [ "./node_modules/@lvl/home" ],
+      "rxjs/*": [ "./node_modules/rxjs/*" ]
+    }
+  }
+}

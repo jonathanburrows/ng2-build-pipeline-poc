@@ -1,0 +1,70 @@
+﻿@import 'node_modules/@lvl/core/src/styles/variables.scss';
+
+.lvl-estate-gallery {
+    @keyframes addingHouse {
+        0% {
+            transform: scale(0, 0);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    .house {
+        animation: addingHouse 400ms cubic-bezier(0.35, 0, 0.25, 1) 1;
+        background-color: $secondary-color;
+        box-sizing: border-box;
+        color: white;
+        display: inline-block;
+        height: 240px;
+        margin-bottom: $gutter;
+        margin-right: $gutter;
+        padding: $gutter;
+        transform-origin: 0 0;
+        width: 240px;
+    }
+
+    #purchase-house {
+        margin-top: $gutter;
+    }
+
+    .input-group {
+        display: inline-block;
+        position: relative;
+        font-size: $medium-font-size;
+        margin-right: $gutter;
+        vertical-align: bottom;
+
+        span {
+            color: #ccc;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: $medium-font-size / 1.6;
+            transition: all cubic-bezier(0.35, 0, 0.25, 1) 80ms;
+        }
+
+        input {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            display: block;
+            height: $medium-font-size * 1.6;
+            padding-left: $medium-font-size / 1.6;
+            outline: none;
+        }
+
+        input:focus + span,
+        input.filled + span {
+            top: -$medium-font-size * 1.6;
+        }
+
+        input:focus + span {
+            color: $primary-color;
+        }
+
+        input:focus {
+            border-color: $primary-color;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+﻿@import '../../styles/variables.scss';
+
+.lvl-title {
+    background-color: $primary-color;
+    box-shadow: $level-7-elevation;
+    box-sizing: border-box;
+    color: $tertiary-color;
+    font: normal $medium-font-size $font-family;
+    height: ($gutter * 2) + $medium-font-size;
+    line-height: ($gutter * 2) + $medium-font-size;
+    padding-left: $gutter;
+    z-index: 7;
+}

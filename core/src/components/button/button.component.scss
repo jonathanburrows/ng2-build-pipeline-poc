@@ -1,0 +1,15 @@
+﻿@import '../../styles/variables.scss';
+
+.lvl-button {
+    background-color: $secondary-color;
+    color: $tertiary-color;
+    cursor: pointer;
+    border: none;
+    box-shadow: $level-6-elevation;
+    height: 3 * $medium-font-size;
+    margin-top: $gutter;
+    margin-right: $gutter;
+    padding-left: $medium-font-size;
+    padding-right: $medium-font-size;
+    z-index: 6;
+}

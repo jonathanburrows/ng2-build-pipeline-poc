@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es6", "dom" ],
+    "mapRoot": "",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "dist/out-tsc",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "@angular/*": [ "./node_modules/@angular/*" ],
+      "@angular/platform-browser-dynamic/testing": [ "./node_modules/@angular/platform-browser-dynamic/testing" ],
+      "@lvl/core": [ "./node_modules/@lvl/core" ],
+      "rxjs/*": [ "./node_modules/rxjs/*" ]
+    }
+  },
+  "exclude": [
+    "node_modules/@angular"
+  ],
+  "include": [
+    "node_modules/@lvl/real-estate"
+  ],
+  "files": [
+    "src/main.ts",
+    "../core/src/core.module.ts",
+    "node_modules/@lvl/real-estate/src/real-estate.module.ts"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@lvl/housing",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "init.dev": "npm link ../core && npm link ../real-estate",
+    "build.dev": "ng build --progress=false --output-path=./dist/dev",
+    "serve.dev": "ng serve --progress=false --output-path=./dist/serve --open",
+
+    "init.prod": "npm unlink @lvl/core && npm unlink @lvl/real-estate && npm install",
+    "build.prod": "ng build --prod --aot --progress=false --output-path=./dist/prod",
+    "serve.prod": "ng serve --prod --aot --progress=false --output-path=./dist/serve --open",
+
+    "test": "ng test --watch=false",
+
+    "init.e2e": "webdriver-manager update --standalone false --gecko false",
+    "run.e2e": "protractor",
+    "e2e": "npm run init.e2e && npm-run-all -p serve.dev run.e2e",
+
+    "lint": "ng lint",
+
+    "ng": "ng"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "2.4.7",
+    "@angular/compiler": "2.4.7",
+    "@angular/core": "2.4.7",
+    "@angular/forms": "2.4.7",
+    "@angular/http": "2.4.7",
+    "@angular/platform-browser": "2.4.7",
+    "@angular/platform-browser-dynamic": "2.4.7",
+    "@angular/router": "3.4.7",
+    "@lvl/core": "file:../core",
+    "@lvl/real-estate": "file:../real-estate",
+    "core-js": "2.4.1",
+    "rxjs": "5.1.1",
+    "ts-helpers": "1.1.2",
+    "zone.js": "0.7.7"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "2.4.7",
+    "@types/core-js": "0.9.35",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "6.0.63",
+    "angular-cli": "1.0.0-beta.28.3",
+    "codelyzer": "2.0.0",
+    "jasmine-core": "2.5.2",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-cli": "1.0.1",
+    "karma-jasmine": "1.1.0",
+    "karma-remap-istanbul": "0.2.2",
+    "npm-run-all": "4.0.1",
+    "protractor": "4.0.14",
+    "ts-node": "1.2.1",
+    "tslint": "4.4.2",
+    "typescript": "2.0.10"
+  }
+}
