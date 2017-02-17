@@ -1,7 +1,5 @@
-@import '~@lvl/core/src/styles/variables';
-
-.content {
-    padding: $gutter;
+@mixin app-theme {
+    .content {
+        padding: $gutter;
+    }
 }
-
-@mixin app-theme {}

@@ -1,9 +1,6 @@
-﻿@import '~@lvl/core/src/styles/variables';
-
-.view-houses {
-    margin-top: $gutter;
-    display: block;
-}
-
-@mixin about-theme {
+﻿@mixin about-theme {
+    .view-houses {
+        margin-top: $gutter;
+        display: block;
+    }
 }

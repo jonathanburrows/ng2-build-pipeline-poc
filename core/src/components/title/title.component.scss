@@ -1,19 +1,14 @@
-﻿@import '../../styles/_variables.scss';
-
-.lvl-title {
-    font-size: $medium-font-size;
-    box-shadow: $level-7-elevation;
-    box-sizing: border-box;
-    color: white;
-    font: normal $medium-font-size $font-family;
-    height: ($gutter * 2) + $medium-font-size;
-    line-height: ($gutter * 2) + $medium-font-size;
-    padding-left: $gutter;
-    z-index: 7;
-}
-
-@mixin title-theme {
+﻿@mixin title-theme {
     .lvl-title {
+        font-size: $medium-font-size;
         background-color: $primary-500;
+        box-shadow: $level-7-elevation;
+        box-sizing: border-box;
+        color: white;
+        font: normal $medium-font-size $font-family;
+        height: ($gutter * 2) + $medium-font-size;
+        line-height: ($gutter * 2) + $medium-font-size;
+        padding-left: $gutter;
+        z-index: 7;
     }
 }
