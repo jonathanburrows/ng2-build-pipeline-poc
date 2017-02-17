@@ -1,6 +1,7 @@
 ﻿import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MaterialModule } from '@angular/material';
 
 import { CoreModule } from '@lvl/core';
 
@@ -20,6 +21,7 @@ import { RealEstateRouterModule } from './real-estate.router.module';
         CommonModule,
         CoreModule,
         FormsModule,
+        MaterialModule,
         RealEstateRouterModule
     ]
 })

@@ -1,0 +1,5 @@
+﻿@import '../components/title/title.component.scss';
+
+@mixin core-theme{
+    @include title-theme;
+}

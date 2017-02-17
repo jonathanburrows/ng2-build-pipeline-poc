@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -35,6 +36,7 @@ import { HousingRouterModule } from './housing.router.module';
         FormsModule,
         HousingRouterModule,
         HttpModule,
+        MaterialModule.forRoot(),
         RouterModule
     ],
     bootstrap: [AppComponent]

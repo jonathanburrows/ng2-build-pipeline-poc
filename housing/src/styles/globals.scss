@@ -1,10 +1,30 @@
 /* Once the angular cli allows for overriding sass globally, this will replace @lvl/core/globals.scss */
-@import 'node_modules/@lvl/core/src/styles/variables.scss';
+@import '~@angular/material/core/theming/all-theme';
+
+@import '~@lvl/core/src/styles/variables';
+
+$font-size: 5px;
+
+@import '~@lvl/core/src/styles/core.theme';
+@import '~@lvl/real-estate/src/styles/real-estate.theme.scss';
+
+@import 'housing.theme';
+
+$housing-app-primary: mat-palette($mat-deep-purple);
+$housing-app-accent: mat-palette($mat-pink);
+$housing-app-warn: mat-palette($mat-orange);
+$housing-app-theme: mat-light-theme($housing-app-primary, $housing-app-accent, $housing-app-warn);
+
+@include set-theme($housing-app-theme);
+@include core-theme;
+@include real-estate-theme;
+@include housing-theme;
+
 
 html,
 body {
     font-family: $font-family;
-    font-size: $small-font-size;
+    font-size: $medium-font-size;
     margin: 0;
     padding: 0;
 }

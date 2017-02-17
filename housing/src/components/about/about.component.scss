@@ -1,7 +1,9 @@
-﻿@import 'node_modules/@lvl/core/src/styles/variables.scss';
+﻿@import '~@lvl/core/src/styles/variables';
 
-.lvl-housing-about {
-    #view-houses {
-        display: block;
-    }
+.view-houses {
+    margin-top: $gutter;
+    display: block;
+}
+
+@mixin about-theme {
 }

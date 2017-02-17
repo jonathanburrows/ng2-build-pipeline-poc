@@ -1,0 +1,34 @@
+﻿@import '~@angular/material/core/theming/all-theme';
+
+@include mat-core();
+
+@mixin set-theme($setting) {
+    $primary: map-get($setting, primary) !global;
+    $primary-300: map-get($primary, 300) !global;
+    $primary-500: map-get($primary, 500) !global;
+    $primary-700: map-get($primary, 700) !global
+
+    $accent: map-get($setting, accent) !global;
+    $accent-300: map-get($accent, 300) !global;
+    $accent-500: map-get($accent, 500) !global;
+    $accent-700: map-get($accent, 700) !global;
+
+    $foreground: map-get($setting, foreground);
+    $foreground-text: map-get($foreground, text) !global;
+
+    $font-size: 240px !default !global;
+    @include angular-material-theme($setting);
+    $theme: $setting;
+}
+
+$large-font-size: 20px;
+$medium-font-size: 16px;
+$small-font-size: 14px;
+$font-family: Arial;
+$gutter: 24px;
+$portrait-max-width: 480px;
+$landscape-max-width: 960px;
+$tablet-max-width: 1280px;
+$screen-max-width: 1600px;
+$level-6-elevation: 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+$level-7-elevation: 0px 4px 5px -2px rgba(0, 0, 0, 0.2);

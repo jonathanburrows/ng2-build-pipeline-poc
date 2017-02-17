@@ -1,0 +1,7 @@
+﻿@import '../components/about/about.component.scss';
+@import '../components/app/app.component.scss';
+
+@mixin housing-theme{
+    @include about-theme;
+    @include app-theme;
+}

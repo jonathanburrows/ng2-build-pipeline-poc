@@ -1,7 +1,7 @@
-@import 'node_modules/@lvl/core/src/styles/variables';
+@import '~@lvl/core/src/styles/variables';
 
-.lvl-housing-app{
-    .content{
-        padding: $gutter;
-    }
+.content {
+    padding: $gutter;
 }
+
+@mixin app-theme {}

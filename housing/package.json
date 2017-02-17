@@ -7,19 +7,14 @@
     "init.dev": "npm link ../core && npm link ../real-estate",
     "build.dev": "ng build --progress=false --output-path=./dist/dev",
     "serve.dev": "ng serve --progress=false --output-path=./dist/serve --open",
-
     "init.prod": "npm unlink @lvl/core && npm unlink @lvl/real-estate && npm install",
     "build.prod": "ng build --prod --aot --progress=false --output-path=./dist/prod",
     "serve.prod": "ng serve --prod --aot --progress=false --output-path=./dist/serve --open",
-
     "test": "ng test --watch=false",
-
     "init.e2e": "webdriver-manager update --standalone false --gecko false",
     "run.e2e": "protractor",
     "e2e": "npm run init.e2e && npm-run-all -p serve.dev run.e2e",
-
     "lint": "ng lint",
-
     "ng": "ng"
   },
   "private": true,
@@ -29,6 +24,7 @@
     "@angular/core": "2.4.7",
     "@angular/forms": "2.4.7",
     "@angular/http": "2.4.7",
+    "@angular/material": "2.0.0-beta.2",
     "@angular/platform-browser": "2.4.7",
     "@angular/platform-browser-dynamic": "2.4.7",
     "@angular/router": "3.4.7",

@@ -1,35 +1,36 @@
-﻿<section class="lvl-estate-gallery">
-    <section class="house" *ngFor="let house of houses">
-        {{house.address}}
-        <br />
-        {{house.squareFeet}} square feet
-        <br />
-        {{house.architectureStyle}} architecture style
-    </section>
-
-    <form id="purchase-house" (ngSubmit)="purchaseHouse()">
-        <label class="input-group">
-            <input #address
-                   name="address"
-                   [(ngModel)]="houseToPurchase.address"
-                   [class.filled]="houseToPurchase.address" />
-            <span>Address</span>
-        </label>
-
-        <label class="input-group">
-            <input name="squareFeet"
-                   [(ngModel)]="houseToPurchase.squareFeet"
-                   [class.filled]="houseToPurchase.squareFeet" />
-            <span>Square Feet</span>
-        </label>
-
-        <label class="input-group">
-            <input name="architectureStyle"
-                   [(ngModel)]="houseToPurchase.architectureStyle"
-                   [class.filled]="houseToPurchase.architectureStyle" />
-            <span>Architecture</span>
-        </label>
-
-        <lvl-button (click)="purchaseHouse()">Purchase House</lvl-button>
-    </form>
+﻿<section class="house" *ngFor="let house of houses">
+    {{house.address}}
+    <br />
+    {{house.squareFeet}} square feet
+    <br />
+    {{house.architectureStyle}} architecture style
 </section>
+
+<form id="purchase-house" (ngSubmit)="purchaseHouse()">
+    <md-input-container>
+        <input #address
+               mdInput
+               placeholder="Address"
+               name="address"
+               [(ngModel)]="houseToPurchase.address"
+               required />
+    </md-input-container>
+
+    <md-input-container>
+        <input mdInput
+               name="squareFeet"
+               placeholder="Square Feet"
+               [(ngModel)]="houseToPurchase.squareFeet"
+               required />
+    </md-input-container>
+
+    <md-input-container>
+        <input mdInput
+               placeholder="Architecture"
+               name="architectureStyle"
+               [(ngModel)]="houseToPurchase.architectureStyle"
+               required />
+    </md-input-container>
+
+    <button md-raised-button type="submit" color="accent" class="purchase-house">Purchase House</button>
+</form>
